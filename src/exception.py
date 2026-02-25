@@ -20,7 +20,12 @@ def error_message_detail(error, error_detail:sys): # I will get error and the er
 
 
 
+
 class CustomException(Exception):
+    """
+    This class will takes two parameters i.e error_message and error_details and will
+    return an error message along with the file name, error line number
+    """
     def __init__(self,error_message, error_detail:sys):
         super().__init__(error_message)
         self.error_message = error_message_detail(error=error_message, error_detail= error_detail)
